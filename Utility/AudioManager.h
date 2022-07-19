@@ -1,0 +1,26 @@
+#pragma once
+
+#include <iostream>
+#include <SFML/Audio.hpp>
+
+using namespace std;
+using namespace sf;
+
+namespace Valzuroid {
+    namespace Pinball {
+        namespace Utility {
+            class AudioManager {
+            protected:
+                SoundBuffer buffer;
+                Sound sound;
+            private:
+                Music music;
+            public:
+                AudioManager();
+                AudioManager(bool Playmusic, const string& AudioPath);
+                void PlayMusic(const string& AudioPath);
+                void PlaySound(const string& AudioPath);
+            };
+        }
+    }
+}
